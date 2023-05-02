@@ -1,0 +1,63 @@
+/*rem - medida relativa con mayor nivel de jerarquía, varía en relación a una raíz 
+em - tiene como referencia de medida el font-size del elemento actual.
+
+REM es una unidad relativa a la propiedad font-size de la etiqueta <html>, 
+por lo tanto si la etiqueta <html> tiene 16px de font-size 1 REM equivale a 16px. 
+EM es relativa a la propiedad font-size de la etiqueta madre, por lo tanto, 
+si la etiqueta madre es un font-size de 16px, 1 EM equivale a 16px.*/
+
+.llamada  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--background-blanco);
+    text-align: center;
+    
+    background-color: var(--background-llamada-mobile);
+
+    padding-top: 12.25rem;
+    padding-bottom: 2.5rem;
+}
+
+.llamada__titulo {
+    font-family: var(--montserrat);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+}
+
+.llamada__texto {
+    font-size: 1.25rem;
+    line-height: normal;
+
+    margin: 0 auto 2.5rem;
+}
+
+.llamada__boton {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* PARA TABLET */
+@media screen and (min-width: 768px){
+    .llamada__texto{
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .llamada {
+        background-image: url(../img/bg-intro.jpg);
+        background-size: cover;
+
+        padding-top: 8.25rem;
+    }
+
+    .llamada_titulo {
+        font-size: 3.25rem;
+        margin-bottom: 2rem;
+    }
+}
